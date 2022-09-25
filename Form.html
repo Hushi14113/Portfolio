@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Me</title>
+<script type="text/Javascript">
+function check()
+{
+	var name=Contactdetails.n1.value;
+	if(name=="")
+	{
+		alert("Name must be filled compulsorily");
+	};
+	var number=Contactdetails.number.value;
+	if(isNaN(number) || number<7000000000 || number>9999999999)
+	{
+		alert("Invalid Mobile Number");
+	}
+	else
+	{
+		alert("Thank you for your contact details, we will get in touch with you soon!");
+	};
+}
+
+</script>
+</head>
+<body bgcolor="skyblue">
+<h1 align="center">Please fill in your details here</h1>
+<form name="Contactdetails">
+Enter your name - <input type="text" name="n1"><br><br>
+Enter your Indian mobile number(10 digits only) - <input type="tel" name="number" pattern="[7-9]{1}[0-9]{9}" required><br><br>
+Enter your Email ID - <input type="email" name="email" required><br><br>
+<input type="submit" value="SUBMIT" onClick="check()">
+</form>
+</body>
+</html>
